@@ -56,22 +56,30 @@ class FirstViewController: UIViewController{
 
     @objc func navigateToSecondView(viewController: UIViewController){
         let targetVC = SecondViewController()
-        targetVC.title = "sheet"
+        targetVC.buttonTitle = "Button Title?"
         present(targetVC, animated: true)
     }
     
     @objc func navigateToThirdView(viewController: UIViewController){
         let targetVC = ThirdViewController()
+        targetVC.viewTitle = "This is Third View"
         navigationController?.pushViewController(targetVC, animated: true)
     }
 }
 
 class SecondViewController: UIViewController{
+    
+    var buttonTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "second view"
+        
+        guard let selfViewTitle = buttonTitle else { return }
+        
+        title = selfViewTitle
+        
         let button = UIButton()
-        button.setTitle("close", for: .normal)
+        button.setTitle(buttonTitle, for: .normal)
         button.addTarget(self, action: #selector(dismissSheet), for: .touchUpInside)
         view.addSubview(button)
         
@@ -90,9 +98,11 @@ class SecondViewController: UIViewController{
 }
 
 class ThirdViewController: UIViewController{
+    var viewTitle: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "third view"
+        guard let selfViewTitle = viewTitle else { return }
+        title = selfViewTitle
         view.backgroundColor = .systemCyan
     }
 }
