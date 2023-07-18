@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E1CCD1EC2A60DF2B00956513 /* UIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CCD1EC2A60DF2B00956513 /* ProgramaticNavigationViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgramaticNavigationViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CCD1EF2A60DF2B00956513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1CCD1F12A60DF2B00956513 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1CCD1F32A60DF2B00956513 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		E1CCD1E32A60DF2B00956513 = {
 			isa = PBXGroup;
 			children = (
-				E1CCD1EE2A60DF2B00956513 /* UIKitDemo */,
+				E1CCD1EE2A60DF2B00956513 /* ProgramaticNavigationViewController */,
 				E1CCD1ED2A60DF2B00956513 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		E1CCD1ED2A60DF2B00956513 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1CCD1EC2A60DF2B00956513 /* UIKitDemo.app */,
+				E1CCD1EC2A60DF2B00956513 /* ProgramaticNavigationViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E1CCD1EE2A60DF2B00956513 /* UIKitDemo */ = {
+		E1CCD1EE2A60DF2B00956513 /* ProgramaticNavigationViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E1CCD1EF2A60DF2B00956513 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				E1CCD1FA2A60DF2D00956513 /* LaunchScreen.storyboard */,
 				E1CCD1FD2A60DF2D00956513 /* Info.plist */,
 			);
-			path = UIKitDemo;
+			path = ProgramaticNavigationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E1CCD1EB2A60DF2B00956513 /* UIKitDemo */ = {
+		E1CCD1EB2A60DF2B00956513 /* ProgramaticNavigationViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1CCD2002A60DF2D00956513 /* Build configuration list for PBXNativeTarget "UIKitDemo" */;
+			buildConfigurationList = E1CCD2002A60DF2D00956513 /* Build configuration list for PBXNativeTarget "ProgramaticNavigationViewController" */;
 			buildPhases = (
 				E1CCD1E82A60DF2B00956513 /* Sources */,
 				E1CCD1E92A60DF2B00956513 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = UIKitDemo;
+			name = ProgramaticNavigationViewController;
 			productName = UIKitDemo;
-			productReference = E1CCD1EC2A60DF2B00956513 /* UIKitDemo.app */;
+			productReference = E1CCD1EC2A60DF2B00956513 /* ProgramaticNavigationViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E1CCD1E72A60DF2B00956513 /* Build configuration list for PBXProject "UIKitDemo" */;
+			buildConfigurationList = E1CCD1E72A60DF2B00956513 /* Build configuration list for PBXProject "ProgramaticNavigationViewController" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1CCD1EB2A60DF2B00956513 /* UIKitDemo */,
+				E1CCD1EB2A60DF2B00956513 /* ProgramaticNavigationViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -341,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E1CCD1E72A60DF2B00956513 /* Build configuration list for PBXProject "UIKitDemo" */ = {
+		E1CCD1E72A60DF2B00956513 /* Build configuration list for PBXProject "ProgramaticNavigationViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1CCD1FE2A60DF2D00956513 /* Debug */,
@@ -350,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1CCD2002A60DF2D00956513 /* Build configuration list for PBXNativeTarget "UIKitDemo" */ = {
+		E1CCD2002A60DF2D00956513 /* Build configuration list for PBXNativeTarget "ProgramaticNavigationViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1CCD2012A60DF2D00956513 /* Debug */,
