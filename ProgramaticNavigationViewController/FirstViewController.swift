@@ -87,6 +87,7 @@ class FirstViewController: UIViewController{
 
     @objc func navigateToSecondView(viewController: UIViewController){
         let targetVC = SecondViewController()
+//        targetVC.modalPresentationStyle = .fullScreen
         present(targetVC, animated: true)
     }
     
