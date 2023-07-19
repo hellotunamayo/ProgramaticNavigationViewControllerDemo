@@ -8,17 +8,19 @@
 import UIKit
 
 class FirstViewController: UIViewController{
+    
+    //button
+    let buttonToSecondView: UIButton = UIButton()
+    let buttonToThirdView: UIButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "First View"
         view.backgroundColor = .systemBackground
         
-        //configure button
-        let buttonToSecondView: UIButton = UIButton()
+        //configure buttons
         setupFirstButton()
-        
-        let buttonToThirdView: UIButton = UIButton()
         setupSecondButton()
         
         //add constraints
@@ -56,7 +58,7 @@ class FirstViewController: UIViewController{
 
     @objc func navigateToSecondView(viewController: UIViewController){
         let targetVC = SecondViewController()
-        targetVC.buttonTitle = "Button Title?"
+        targetVC.buttonTitle = "Close Modal"
         present(targetVC, animated: true)
     }
     
