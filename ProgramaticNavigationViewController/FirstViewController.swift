@@ -7,6 +7,35 @@
 
 import UIKit
 
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.delegate = self
+        view.backgroundColor = .systemBackground
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let tabOne: UIViewController = FirstViewController()
+        let tabOneItem: UITabBarItem = UITabBarItem(title: "tab one", image: UIImage(systemName: "applewatch.slash"), selectedImage: UIImage(systemName: "applewatch"))
+        
+        tabOne.tabBarItem = tabOneItem
+        
+        let tabTwo: UIViewController = SecondViewController()
+        let tabTwoItem: UITabBarItem = UITabBarItem(title: "tab two", image: UIImage(systemName: "person.crop.circle.badge.minus"), selectedImage: UIImage(systemName: "person.crop.circle.badge.checkmark"))
+        
+        tabTwo.tabBarItem = tabTwoItem
+        
+        let tabThree: UIViewController = ThirdViewController()
+        let tabThreeItem: UITabBarItem = UITabBarItem(title: "tab three", image: UIImage(systemName: "square.and.arrow.up"), selectedImage: UIImage(systemName: "square.and.arrow.up.trianglebadge.exclamationmark"))
+        
+        tabThree.tabBarItem = tabThreeItem
+        
+        self.viewControllers = [tabOne, tabTwo, tabThree]
+    }
+}
+
 class FirstViewController: UIViewController{
     
     //button
@@ -16,7 +45,7 @@ class FirstViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "First View"
+//        title = "First View"
         view.backgroundColor = .systemBackground
         
         //configure buttons
@@ -58,30 +87,26 @@ class FirstViewController: UIViewController{
 
     @objc func navigateToSecondView(viewController: UIViewController){
         let targetVC = SecondViewController()
-        targetVC.buttonTitle = "Close Modal"
         present(targetVC, animated: true)
     }
     
     @objc func navigateToThirdView(viewController: UIViewController){
         let targetVC = ThirdViewController()
-        targetVC.viewTitle = "This is Third View"
         navigationController?.pushViewController(targetVC, animated: true)
     }
 }
 
 class SecondViewController: UIViewController{
-    
-    var buttonTitle: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let selfViewTitle = buttonTitle else { return }
+        view.backgroundColor = .systemBackground
         
-        title = selfViewTitle
+        
+        title = "second"
         
         let button = UIButton()
-        button.setTitle(buttonTitle, for: .normal)
+        button.setTitle("second", for: .normal)
         button.addTarget(self, action: #selector(dismissSheet), for: .touchUpInside)
         view.addSubview(button)
         
@@ -100,11 +125,9 @@ class SecondViewController: UIViewController{
 }
 
 class ThirdViewController: UIViewController{
-    var viewTitle: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let selfViewTitle = viewTitle else { return }
-        title = selfViewTitle
+        title = "third"
         view.backgroundColor = .systemCyan
     }
 }
