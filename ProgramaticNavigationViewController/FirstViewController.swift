@@ -7,17 +7,19 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController, UITabBarControllerDelegate{
+class TabBarViewController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
         view.backgroundColor = .systemBackground
+        setupTabBar()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func setupTabBar() {
         
-        let tabOne: UIViewController = FirstViewController()
+        tabBar.barTintColor = .systemFill
+        tabBar.backgroundColor = .systemBackground
+        
+        let tabOne: UINavigationController = UINavigationController(rootViewController: FirstViewController())
         let tabOneItem: UITabBarItem = UITabBarItem(title: "tab one", image: UIImage(systemName: "applewatch.slash"), selectedImage: UIImage(systemName: "applewatch"))
         
         tabOne.tabBarItem = tabOneItem
@@ -46,7 +48,7 @@ class FirstViewController: UIViewController{
         super.viewDidLoad()
         
 //        title = "First View"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGray4
         
         //configure buttons
         setupFirstButton()
